@@ -62,39 +62,95 @@ html {
 }
 
 .slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 4rem;
-  animation: 5s alternate slidein;
+  width: 60vw;
+  margin: 4rem auto;
 }
 
-.image {
-  border-radius: 10%;
-  width: 60vw;
-  height: 60vh;
+.slider__input {
+  display: none;
+}
+
+.slider__viewport {
+  overflow: hidden;
+}
+
+.slider__track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.slider__image,
+.slider__desc {
+  flex: 0 0 100%;
+}
+
+.slider__sub_item {
+  margin: 3rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider__image {
   object-fit: cover;
-  display: block;
+  border-radius: 5%;
 }
 
 .slider__desc {
-  fomt-size: 1rem;
+  font-size: 1.5rem;
   color: white;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
+#slide-1:checked ~ .slider__viewport .slider__track {
+  transform: translate(0);
+}
 
-  75% {
-    font-size: 300%;
-    margin-left: 25%;
-    width: 150%;
-  }
+#slide-1:checked ~ .slider__sub_item .slider__viewport .slider__track {
+  transform: translate(0);
+}
+
+#slide-2:checked ~ .slider__viewport .slider__track {
+  transform: translate(-100%);
+}
+
+#slide-2:checked ~ .slider__sub_item .slider__viewport .slider__track {
+  transform: translate(-100%);
+}
+
+#slide-3:checked ~ .slider__viewport .slider__track {
+  transform: translate(-200%);
+}
+
+#slide-3:checked ~ .slider__sub_item .slider__viewport .slider__track {
+  transform: translate(-200%);
+}
+
+#slide-4:checked ~ .slider__viewport .slider__track {
+  transform: translate(-300%);
+}
+
+#slide-4:checked ~ .slider__sub_item .slider__viewport .slider__track {
+  transform: translate(-300%);
+}
+
+.slider__controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.slider__controls label {
+  width: 1rem;
+  height: 1rem;
+  border: 0.15rem solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: white;
+}
+
+#slide-1:checked ~ .slider__sub_item .slider__controls label[for="slide-1"],
+#slide-2:checked ~ .slider__sub_item .slider__controls label[for="slide-2"],
+#slide-3:checked ~ .slider__sub_item .slider__controls label[for="slide-3"],
+#slide-4:checked ~ .slider__sub_item .slider__controls label[for="slide-4"] {
+  background-color: rgb(32, 32, 30);
 }

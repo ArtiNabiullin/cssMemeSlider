@@ -8,51 +8,63 @@
   </head>
   <body>
     <main class="main">
-      <wrapper class="main__wrapper">
-        <div class="slider">
-          <div class="slider__item slider__item___1">
-            <img
-              src="/cssMemeSlider/img/GOD DAYUMMMM.jfif"
-              alt="GOD DAYUMMMM"
-              class="image"
-            />
-            <h1 class="slider__desc">GOD DAYUMMMM</h1>
+      <div class="slider">
+        <input
+          title="slider"
+          class="slider__input"
+          type="radio"
+          name="slider"
+          id="slide-1"
+          checked
+        />
+        <input title="slider" class="slider__input" type="radio" name="slider" id="slide-2" />
+        <input title="slider" class="slider__input" type="radio" name="slider" id="slide-3" />
+        <input title="slider" class="slider__input" type="radio" name="slider" id="slide-4" />
+          <div class="slider__viewport slider__viewport_images">
+            <div class="slider__track slider__track_images">
+              <img
+                src="/cssMemeSlider/img/GOD DAYUMMMM.jfif"
+                alt="GOD DAYUMMMM"
+                class="slider__image"
+              />
+              <img
+                src="/cssMemeSlider/img/His plug is Allen😞.jfif"
+                alt="His plug is Allen"
+                class="slider__image"
+              />
+              <img
+                src="/cssMemeSlider/img/maxresdefault.jpg"
+                alt="2 years relationship"
+                class="slider__image"
+              />
+              <img
+                src="/cssMemeSlider/img/You just told Mr_ Incredible that his daughter is the one who started the fire.jfif"
+                alt="You just told Mr. Incredible that his daughter is the one who started the fire"
+                class="slider__image"
+              />
+              </div>
+            </div>
+            <div class="slider__sub_item">
+              <div class="slider__viewport slider__viewport_descs">
+                <div class="slider__track slider__track_descs">
+                  <h1 class="slider__desc">GOD DAYUMMMM</h1>
+                  <h1 class="slider__desc">His plug is Allen😞</h1>
+                  <h1 class="slider__desc">2 years relationship</h1>
+                  <h1 class="slider__desc">
+                    You just told Mr. Incredible that his daughter is the one who
+                    started the fire
+                  </h1>
+                </div>
+                <div class="slider__controls">
+                  <label for="slide-1" class="slider__control"></label>
+                  <label for="slide-2" class="slider__control"></label>
+                  <label for="slide-3" class="slider__control"></label>
+                  <label for="slide-4" class="slider__control"></label>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="slider__item slider__item___2">
-            <img
-              src="/cssMemeSlider/img/His plug is Allen😞.jfif"
-              alt="His plug is Allen"
-              class="image"
-            />
-            <h1 class="slider__desc">His plug is Allen😞</h1>
-          </div>
-          <div class="slider__item slider__item___3">
-            <img
-              src="/cssMemeSlider/img/maxresdefault.jpg"
-              alt="2 years relationship"
-              class="image"
-            />
-            <h1 class="slider__desc">2 years relationship</h1>
-          </div>
-          <div class="slider__item slider__item___4">
-            <img
-              src="/cssMemeSlider/img/You just told Mr_ Incredible that his daughter is the one who started the fire.jfif"
-              alt="You just told Mr. Incredible that his daughter is the one who started the fire"
-              class="image"
-            />
-            <h1 class="slider__desc">
-              You just told Mr. Incredible that his daughter is the one who
-              started the fire
-            </h1>
-          </div>
-          <label for="slider__input">
-            <input type="radio" name="slider" id="slider__input" />
-            <input type="radio" name="slider" id="slider__input" />
-            <input type="radio" name="slider" id="slider__input" />
-            <input type="radio" name="slider" id="slider__input" />
-          </label>
-        </div>
-      </wrapper>
+      </div>
     </main>
   </body>
 </html>
