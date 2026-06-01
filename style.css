@@ -1,0 +1,100 @@
+/* reset start */
+/* 1. Наследуем box-sizing от родителя для удобства */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Убираем внешние отступы у основных элементов */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* 3. Выравниваем базовые шрифты и убираем подчеркивание у ссылок */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration-skip-ink: auto;
+}
+
+/* 4. Упрощаем работу с изображениями и видео */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Наследуем шрифты для элементов форм */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 6. Удаляем маркеры у списков (по желанию) */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+/* reset end */
+
+html {
+  background-color: rgb(32, 32, 30);
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem;
+  animation: 5s alternate slidein;
+}
+
+.image {
+  border-radius: 10%;
+  width: 60vw;
+  height: 60vh;
+  object-fit: cover;
+  display: block;
+}
+
+.slider__desc {
+  fomt-size: 1rem;
+  color: white;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  75% {
+    font-size: 300%;
+    margin-left: 25%;
+    width: 150%;
+  }
+}
