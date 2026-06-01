@@ -85,6 +85,7 @@ html {
 }
 
 .slider__sub_item {
+  width: 100%;
   margin: 3rem auto;
   display: flex;
   align-items: center;
