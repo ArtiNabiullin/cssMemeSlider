@@ -1,1 +1,1 @@
-https://ArtiNabiullin.github.io/cssMemeSlider/
+https://ArtiNabiullin.github.io/cssMemeSlider/index.html
