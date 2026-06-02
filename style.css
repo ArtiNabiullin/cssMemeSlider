@@ -169,6 +169,13 @@ html {
 
 /* @media styles start */
 
+@media (max-width: 1200px) {
+  .slider {
+    margin: 2rem auto;
+    width: min(90vw, 80rem);
+  }
+}
+
 @media (max-width: 500px) {
   .slider {
     margin: 2rem auto;
