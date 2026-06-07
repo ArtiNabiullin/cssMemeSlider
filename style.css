@@ -1,0 +1,207 @@
+/* reset start */
+/* 1. Наследуем box-sizing от родителя для удобства */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Убираем внешние отступы у основных элементов */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* 3. Выравниваем базовые шрифты и убираем подчеркивание у ссылок */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration-skip-ink: auto;
+}
+
+/* 4. Упрощаем работу с изображениями и видео */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Наследуем шрифты для элементов форм */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 6. Удаляем маркеры у списков (по желанию) */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+/* reset end */
+
+html {
+  background-color: rgb(32, 32, 30);
+}
+
+.slider {
+  width: min(100vw, 70rem);
+  margin: 4rem auto;
+}
+
+.slider__input {
+  display: none;
+}
+
+.slider__viewport {
+  overflow: hidden;
+}
+
+.slider__track {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.slider__image,
+.slider__desc {
+  flex: 0 0 100%;
+}
+
+.slider__sub_item {
+  width: 100%;
+  margin: 3rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider__viewport_images {
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.slider__image {
+  width: 100%;
+  height: 80vh;
+  display: block;
+}
+
+.slider__desc {
+  font-size: 1.5rem;
+  color: white;
+}
+
+#slide-1:checked ~ .slider__viewport .slider__track {
+  transform: translate(0);
+}
+
+#slide-1:checked ~ .slider__sub_item .slider__viewport .slider__track {
+  transform: translate(0);
+}
+
+#slide-2:checked ~ .slider__viewport .slider__track {
+  transform: translate(-100%);
+}
+
+#slide-2:checked ~ .slider__sub_item .slider__viewport .slider__track {
+  transform: translate(-100%);
+}
+
+#slide-3:checked ~ .slider__viewport .slider__track {
+  transform: translate(-200%);
+}
+
+#slide-3:checked ~ .slider__sub_item .slider__viewport .slider__track {
+  transform: translate(-200%);
+}
+
+#slide-4:checked ~ .slider__viewport .slider__track {
+  transform: translate(-300%);
+}
+
+#slide-4:checked ~ .slider__sub_item .slider__viewport .slider__track {
+  transform: translate(-300%);
+}
+
+.slider__controls {
+  display: flex;
+  justify-content: center;
+}
+
+.slider__controls label {
+  cursor: pointer;
+  margin: 0.6rem;
+  width: 1rem;
+  height: 1rem;
+  border: 0.15rem solid #3498db;
+  border-radius: 50%;
+  background-color: #3498db;
+}
+
+.slider__controls:hover {
+  cursor: pointer;
+}
+
+.slider__controls label:hover {
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
+}
+
+#slide-1:checked ~ .slider__sub_item .slider__controls label[for="slide-1"],
+#slide-2:checked ~ .slider__sub_item .slider__controls label[for="slide-2"],
+#slide-3:checked ~ .slider__sub_item .slider__controls label[for="slide-3"],
+#slide-4:checked ~ .slider__sub_item .slider__controls label[for="slide-4"] {
+  background-color: rgb(32, 32, 30);
+}
+
+/* @media styles start */
+
+@media (max-width: 1200px) {
+  .slider {
+    margin: 2rem auto;
+    width: min(90vw, 80rem);
+  }
+}
+
+@media (max-width: 500px) {
+  .slider {
+    margin: 2rem auto;
+    width: min(90vw, 80rem);
+  }
+
+  .slider__sub_item {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem auto;
+    gap: 2rem;
+  }
+
+  .slider__image {
+    height: 50vh;
+  }
+
+  .slider__desc {
+    font-size: 1rem;
+  }
+}
+
+/* @media styles end */
